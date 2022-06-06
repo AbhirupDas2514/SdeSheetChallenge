@@ -1,0 +1,39 @@
+Python Solution:(Not passing one test case,while passing all the test case if i am writting the code in java with same logic)
+
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+def findDuplicate(arr:list, n:int):
+    l=sorted(arr)
+    last=0
+    for i in l:
+        if i==last:
+            return i
+        last=i
+    return -1    
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Java solution:
+
+import java.util.* ;
+import java.io.*; 
+import java.util.ArrayList;
+
+public class Solution{
+    public static int findDuplicate(ArrayList<Integer> arr, int n){
+        // Write your code here.
+        Collections.sort(arr);
+        int prev=0;
+        for(Integer i : arr){
+            if(i==prev){
+                return i;
+            }
+            prev=i;
+        }
+        return -1;
+    }
+}
