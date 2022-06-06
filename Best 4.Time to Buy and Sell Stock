@@ -1,0 +1,20 @@
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+def maximumProfit(prices):
+    # Write your code here.
+    temp=prices[:]
+    temp[-1]=prices[-1]
+    n=len(prices)
+    for i in range(n-2,-1,-1):
+        if prices[i]>temp[i+1]:
+            temp[i]=prices[i]
+        else:
+            temp[i]=temp[i+1]
+    res=-1
+    for i in range(n):
+        if(temp[i]-prices[i]>res):
+            res=temp[i]-prices[i]
+    return res
