@@ -1,7 +1,6 @@
-from os import *
-from sys import *
-from collections import *
-from math import *
+You are given an integer N. Your task is to return a 2-D ArrayList containing the pascal’s triangle till the row N.
+A Pascal's triangle is a triangular array constructed by summing adjacent elements in preceding rows. 
+-------------------------------------------------------------------------------------------------------------------------------------
 
 def printPascal(n:int):
     # Write your code here.
