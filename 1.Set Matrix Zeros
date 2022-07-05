@@ -1,16 +1,19 @@
-from os import *
-from sys import *
-from collections import *
-from math import *
+Given an ‘N’ x ‘M’ integer matrix, if an element is 0, set its entire row and column to 0's, and return the matrix. In particular, your task is to modify it in
+such a way that if a cell has a value 0 (matrix[i][j] == 0), then all the cells of the ith row and jth column should be changed to 0.
+You must do it in place.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-from typing import List
 
 def setZeros(matrix: List[List[int]]) -> None:
-	# Write your code here.
+    # Write your code here.
     n=len(matrix)
     m=len(matrix[0])
+    
+    #Memory Arrays
     row=[0 for i in range(n)]
     col=[0 for i in range(m)]
+    
+    #If a row or column contains 0, then that row and column is marked as -1,so that during the final traversal we can reference to it.
     for i in range(n):
         for j in range(m):
             if matrix[i][j]==0:
